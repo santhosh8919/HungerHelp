@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+}
+
+body {
+  padding: 0;
+}
+
+ul {
+  list-style: none; /* Remove list dots */
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: absolute; /* Allows precise placement */
+  top: 2rem; /* Adjusts the vertical position (higher on the page) */
+  right: 2rem; /* Moves the links towards the right side */
+}
+
+a {
+  text-decoration: none; /* Remove underline by default */
+  color: #00aaff; /* Light blue color for links */
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+a:hover {
+  color: white; /* Change text color to white on hover */
+  text-decoration: underline;
+  text-decoration-color: #00aaff; /* Blue underline on hover */
+}

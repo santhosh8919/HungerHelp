@@ -1,0 +1,156 @@
+/* body{
+  background: linear-gradient(to right, #4e8c92, #2a3d4f);
+} */
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 630px;
+    margin-top: -60px;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}.heading-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.heading-overlay.active {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.heading-overlay h1 {
+    font-size: 4.7rem;
+    margin-bottom:-170px;
+    transform: scale(1); 
+    transition: transform 1s ease, font-size 1s ease; 
+}
+
+/* Enlarge the heading by default */
+.heading-overlay.active h1 {
+    transform: scale(1.5); /* Enlarge the heading */
+    font-size: 5rem; /* Increase font size */
+}
+/* Keyframes for continuous enlargement and color change */
+@keyframes enlargeShrink {
+    0% {
+        transform: scale(1);
+        color: #ffffff; /* White */
+    }
+    25% {
+        transform: scale(1.2);
+        color: #ff6347; /* Tomato */
+    }
+    50% {
+        transform: scale(1.5);
+        color: #ff4500; /* OrangeRed */
+    }
+    75% {
+        transform: scale(1.2);
+        color: #32cd32; /* LimeGreen */
+    }
+    100% {
+        transform: scale(1);
+        color: #ffffff; /* Back to White */
+    }
+}
+
+.heading-overlay h1 {
+    font-size: 4.7rem;
+    margin-bottom: -170px;
+    transform: scale(1); /* Initial state */
+    animation: enlargeShrink 5s infinite; /* Apply continuous animation */
+}
+/* Slider Section */
+.activities-section {
+    padding: 5rem 2rem;
+    background-color: #2d88a7; /* Soft light blue background color */
+    text-align: center;
+    height:8 00px;
+  }
+  
+  .activities-heading {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    /* font-family: 'Poppins', sans-serif; */
+    color:rgb(30, 255, 86);
+    text-transform: uppercase;
+  }
+  
+  /* Slider Container */
+  .slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners for the container */
+  }
+  
+  /* Slider Items */
+  .slider {
+    display: flex;
+    transition: transform 1s ease;
+  }
+  
+  .slider-item {
+    min-width: 100%;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style for the images in the slider */
+  .slider-item img {
+    width: 900px;
+    height: auto;
+    max-height: 550px; /* Set a maximum height for the images */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    border-radius: 8px; /* Rounded corners for the images */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  }
+  
+  /* Keyframes for Sliding Effect */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-200%);
+    }
+    75% {
+      transform: translateX(-300%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Apply Animation */
+  .slider {
+    animation: slide 16s infinite; /* 16s for the full cycle */
+  }

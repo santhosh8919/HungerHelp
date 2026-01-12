@@ -1,0 +1,40 @@
+.foot {
+    background-color:slateblue; /* Dark blue-gray background */
+    color: white; /* White text */
+    padding: 20px 0; /* Vertical padding for spacing */
+    position:relative;
+    text-align: center; /* Center-align text */
+    font-family: Arial, sans-serif; /* Clean font for footer text */
+  }
+  
+  .foot p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Slightly smaller text for general footer text */
+  }
+  
+  .contact-info {
+    margin-top: 10px; /* Add space above contact information */
+    line-height: 1.6; /* Better line spacing */
+    font-size: 14px; /* Uniform font size */
+  }
+  
+  .contact-info a {
+    color: #f39c12;  
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .contact-info a:hover {
+    color: #e74c3c; 
+  }
+  
+  .footer-links {
+    list-style-type: none; 
+    padding: 0; 
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  .footer-links a{
+    color:white;
+  }

@@ -1,0 +1,121 @@
+/* General styling for the container */
+.section-registration {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    height: auto;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Styling for the registration form */
+.registration-form {
+    background-color: #242424; /* Dark background color for the form */
+    padding: 1rem; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    width: 100%;
+    max-width: 500px;
+    margin-top: -50px; /* Move form up */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: auto;
+    position: relative;
+    top: -40px; /* Move the form even further up */
+}
+/* Main Heading */
+.registration-form h1.main-heading {
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+    position: relative;
+}
+
+/* Mixed Gradient Color below the heading with animation */
+.registration-form h1.main-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Space between heading and gradient */
+    left: 0;
+    width: 100%;
+    height: 5px; /* Height of the gradient bar */
+    background: linear-gradient(to right, #5d9cec, #ff6347, #5d9cec); /* Initial mixed gradient */
+    background-size: 300% 100%; /* Make the gradient large for animation */
+    animation: moveGradient 3s linear infinite; /* Animation for continuous movement */
+}
+
+/* Keyframes for the gradient movement */
+@keyframes moveGradient {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+/* Input fields styling */
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+    width: 100%;
+    padding: 0.5rem; /* Reduced padding */
+    font-size: 0.85rem; /* Smaller font size */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: white;
+    margin-bottom: 0.4rem; /* Reduced margin between fields */
+}
+
+/* Submit button styling */
+.registration-form button {
+    padding: 0.6rem 1.5rem; /* Reduced padding */
+    background-color: #5d9cec;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 0; /* No space above the button */
+    margin-bottom: 0; /* No space below the button */
+}
+
+/* Styling for the image container */
+.registration-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px; /* Move image up more */
+}
+
+.registration-image img {
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 50px;
+    padding-left: 50px;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .section-registration {
+        flex-direction: column; /* Stack the form and image vertically on smaller screens */
+        align-items: center; /* Center them horizontally */
+    }
+
+    .registration-image img {
+        max-width: 100%; /* Scale image down on small screens */
+        margin-bottom: 20px; /* Add space between image and form */
+    }
+
+    .registration-form {
+        width: 90%; /* Make the form take up more width on smaller screens */
+    }
+}
