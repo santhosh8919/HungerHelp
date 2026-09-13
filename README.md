@@ -11,7 +11,7 @@ Use the following credentials to log in to the live demo:
 
 ```text
 Email: santhosh1@gmail.com
-Password: santhosh
+Password: santhosh ```
 ## 🌟 Project Overview
 
 Food wastage is a pressing global issue while millions still go hungry. HungerHelp bridges this gap by providing an online system where:
