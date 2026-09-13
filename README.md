@@ -1,4 +1,4 @@
-Sure. Here is the **full README.md code** with the demo credentials added.
+
 
 ````md
 # 🍱 HungerHelp — Surplus Food Management System
